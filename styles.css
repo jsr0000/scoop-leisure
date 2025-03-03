@@ -9,44 +9,23 @@
 body {
     background-color: #f9f9f9;
     color: #333;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
     padding: 20px 0;
     text-align: center;
 }
 
 header {
-    background: #222;
+    background: #092959;
     color: white;
     padding: 20px 0;
     text-align: center;
-    position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    padding: 10px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff6600;
 }
 
 #hero {
@@ -55,13 +34,13 @@ nav ul li a:hover {
     padding: 100px 0;
 }
 
-#hero h2 {
+h2 {
     font-size: 2.5rem;
 }
 
 .btn {
     display: inline-block;
-    background: #ff6600;
+    background: rgb(227, 47, 47);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -74,23 +53,50 @@ nav ul li a:hover {
     background: #cc5200;
 }
 
-.service-cards {
+#services {
+    padding-top: 40px;
+}
+
+#services h2 {
+    padding-bottom: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.slide {
+    display: none;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.card {
     background: white;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    transition: transform 0.3s;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.slide img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slide-text {
+    width: 47%;
+    text-align: left;
+    padding-right: 5px;
+}
+
+.slide-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
+    font-size: 1.1rem;
 }
 
 form {
@@ -101,7 +107,8 @@ form {
     margin: auto;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -109,7 +116,7 @@ input, textarea {
 }
 
 button {
-    background: #ff6600;
+    background: rgb(227, 47, 47);
     color: white;
     border: none;
     padding: 10px;
@@ -123,7 +130,7 @@ button:hover {
 }
 
 footer {
-    background: #222;
+    background: #092959;
     color: white;
     text-align: center;
     padding: 15px 0;
