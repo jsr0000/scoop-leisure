@@ -1,24 +1,47 @@
 let slideIndex = 0;
+let timeoutId = null;
+
 showSlides();
 
 function showSlides() {
     let slides = document.querySelectorAll(".slide");
-    slides.forEach(slide => slide.style.display = "none");
-    
+
+    // Remove active class from all slides
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1; }
-    
-    slides[slideIndex - 1].style.display = "flex";  
-    setTimeout(showSlides, 5000); // Change slide every 3 seconds
+
+    // Add active class to current slide
+    slides[slideIndex - 1].classList.add("active");
+
+    // Clear existing timeout and set new one
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(showSlides, 5000);
 }
 
 function changeSlide(n) {
     let slides = document.querySelectorAll(".slide");
-    slides.forEach(slide => slide.style.display = "none");
-    
+
+    // Remove active class from all slides
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
     slideIndex += n;
     if (slideIndex >= slides.length) { slideIndex = 0; }
     if (slideIndex < 0) { slideIndex = slides.length - 1; }
-    
-    slides[slideIndex].style.display = "flex";
+
+    // Add active class to new slide
+    slides[slideIndex].classList.add("active");
+
+    // Reset the timer
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(showSlides, 5000);
 }

@@ -10,12 +10,14 @@ body {
     background-color: #f9f9f9;
     color: #333;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     /* width: 80%; */
     margin: auto;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -31,11 +33,17 @@ header {
 #hero {
     background: url('https://source.unsplash.com/1600x900/?fashion,clothing') no-repeat center center/cover;
     color: black;
-    padding: 100px 0;
+    padding: 80px;
+    position: relative;
+}
+
+#hero p {
+    padding: 20px;
 }
 
 h2 {
     font-size: 2.5rem;
+    color: black;
 }
 
 .btn {
@@ -50,7 +58,7 @@ h2 {
 }
 
 .btn:hover {
-    background: #cc5200;
+    background: #092959;
 }
 
 #services {
@@ -63,31 +71,41 @@ h2 {
 
 .slideshow-container {
     position: relative;
-    width: 80%;
+    width: 85%;
     margin: auto;
+    padding-bottom: 60px;
 }
 
 .slide {
-    display: none;
+    /* display: none; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
-    /* padding: 20px; */
     border-radius: 10px;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+.slide.active {
+    opacity: 1;
 }
 
 .slide img {
     width: 50%;
     height: auto;
     border-radius: 10px;
+
 }
 
 .slide-text {
     width: 47%;
     text-align: left;
-    padding-right: 5px;
+    padding-right: 30px;
 }
 
 .slide-text h3 {
@@ -126,7 +144,7 @@ button {
 }
 
 button:hover {
-    background: #cc5200;
+    background: #092959;
 }
 
 footer {
@@ -135,4 +153,34 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
+}
+
+.buttons {
+    padding-top: 375px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: rgb(227, 47, 47);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    color: white;
+}
+
+.prev {
+    left: 47%;
+}
+
+.next {
+    left: 53%;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #092959;
 }
