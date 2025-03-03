@@ -1,83 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoop Leisure Clothing</title>
+    <title>Scoop Leisure Clothing | Custom Printing & Embroidery</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
-            <img src="imgs/Scoop-Leisure-Clothing-Ltd-040413headbg-0-585x92-480w.png">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="imgs/Scoop-Leisure-Clothing-Ltd-040413headbg-0-585x92-480w.png" alt="Scoop Leisure Clothing Logo">
+                </div>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <section id="services">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Custom Printing & Embroidery</h2>
+            <p>High-quality customized clothing for businesses</p>
+            <a href="#contact" class="btn">Get a Quote Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
             <h2>Our Services</h2>
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="imgs/james-inigo-beK1tm4ufpU-unsplash_1_600x.webp" alt="Custom Embroidery">
-                    <div class="slide-text">
-                        <h3>Custom Embroidery</h3>
-                        <p>Thinking of increasing the public profile of your company? Want new clothing for your team or organisation? With a wide range of garments and state-of-the-art embroidery machinery, Scoop Leisure Clothing are committed to providing you with a fantastic finished product every time.</p>
-                    </div>
-                    
-                </div>
-                <div class="slide fade">
-                    <img src="imgs/screen_printing.webp" alt="Screen Printing">
-                    <div class="slide-text">
-                        <h3>Screen Printing</h3>
-                        <p>Vibrant, long-lasting prints on various materials.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('imgs/screen_printing.webp')"></div>
+                    <div class="service-content">
+                        <h3>Custom Printing</h3>
+                        <p>High-quality screen printing, digital printing, and heat transfer options for all types of garments.</p>
+                        <a href="#contact" class="btn">Enquire Now</a>
                     </div>
                 </div>
-                <div class="slide fade">
-                    <img src="imgs/WOMENS-WORKWEAR.jpg" alt="Workwear & Uniforms">
-                    <div class="slide-text">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('imgs/embroidery.webp')"></div>
+                    <div class="service-content">
+                        <h3>Professional Embroidery</h3>
+                        <p>Durable, high-quality embroidery that gives your clothing a premium, professional appearance.</p>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('imgs/WOMENS-WORKWEAR.jpg')"></div>
+                    <div class="service-content">
                         <h3>Workwear & Uniforms</h3>
-                        <p>Durable and professional apparel for all industries.</p>
+                        <p>Complete workwear solutions for businesses and organizations of all sizes.</p>
+                        <a href="#contact" class="btn">Enquire Now</a>
                     </div>
                 </div>
-            <div class="buttons">
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
         </div>
     </section>
 
-    <section id="hero">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h2>Premium Custom Apparel & Workwear</h2>
-            <p>High-quality embroidery and printing services tailored to your needs.</p>
-            <a href="https://v2.io8.co.uk/cidauenpccvub/" class="btn">View Brochure</a>
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-img" style="background-image: url('images/about.jpg')"></div>
+                <div>
+                    <p>Scoop Leisure Clothing has been providing high-quality printing and embroidery services since 2005. Based in the UK, we serve customers nationwide with fast turnaround times and exceptional quality.</p>
+                    <p>We specialize in custom clothing for businesses, sports teams, schools, and individuals. Our experienced team uses the latest technology and techniques to ensure your designs look perfect.</p>
+                    <p>Whether you need a single customized item or bulk orders for your entire organization, we have the expertise and equipment to deliver outstanding results.</p>
+                    <a href="#contact" class="btn">Get in Touch</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="phone" placeholder="Phone">
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <!-- <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>01234 567890</p>
+                        </div>
+                    </div> -->
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@scoopleisureclothing.co.uk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Stubhampton, Blandford Forum, Dorset</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 9am - 5pm</p>
+                            <p>Weekend: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Scoop Leisure Clothing. All rights reserved.</p>
-        </div>
+            <div class="copyright">
+                <p>&copy; 2025 Scoop Leisure Clothing. All Rights Reserved.</p>
+            </div>
     </footer>
+
     <script src="script.js"></script>
-
 </body>
-
 </html>

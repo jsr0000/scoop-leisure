@@ -1,47 +1,30 @@
-let slideIndex = 0;
-let timeoutId = null;
+// Basic navigation toggle for mobile
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+});
 
-showSlides();
-
-function showSlides() {
-    let slides = document.querySelectorAll(".slide");
-
-    // Remove active class from all slides
-    slides.forEach(slide => {
-        slide.classList.remove("active");
+// Close menu when clicking a link on mobile
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelector('nav').classList.remove('active');
     });
+});
 
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
+// Form submission (prevent default for demo)
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+    this.reset();
+});
 
-    // Add active class to current slide
-    slides[slideIndex - 1].classList.add("active");
-
-    // Clear existing timeout and set new one
-    if (timeoutId) {
-        clearTimeout(timeoutId);
-    }
-    timeoutId = setTimeout(showSlides, 5000);
-}
-
-function changeSlide(n) {
-    let slides = document.querySelectorAll(".slide");
-
-    // Remove active class from all slides
-    slides.forEach(slide => {
-        slide.classList.remove("active");
+// Smooth scroll for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-
-    slideIndex += n;
-    if (slideIndex >= slides.length) { slideIndex = 0; }
-    if (slideIndex < 0) { slideIndex = slides.length - 1; }
-
-    // Add active class to new slide
-    slides[slideIndex].classList.add("active");
-
-    // Reset the timer
-    if (timeoutId) {
-        clearTimeout(timeoutId);
-    }
-    timeoutId = setTimeout(showSlides, 5000);
-}
+});
