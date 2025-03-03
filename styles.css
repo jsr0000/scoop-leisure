@@ -127,25 +127,43 @@ nav ul li a:hover {
 /* Hero section */
 .hero {
     position: relative;
-    height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero.jpg') center/cover no-repeat;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0.7;
 }
 
 .hero-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero h2:after {
@@ -153,9 +171,9 @@ nav ul li a:hover {
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 /* Services section */
@@ -330,6 +348,12 @@ footer {
     text-align: center;
     padding: 25px;
     border-top: 1px solid #444;
+}
+
+.error-label {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: red;
 }
 
 /* Responsive styles */
