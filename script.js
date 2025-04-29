@@ -1,5 +1,3 @@
-emailjs.init('Cw2aq8p5R5YuEY_1q'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
-
 // Basic navigation toggle for mobile
 document.querySelector('.nav-toggle').addEventListener('click', function () {
     document.querySelector('nav').classList.toggle('active');
@@ -13,15 +11,14 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 // Form submission (prevent default for demo)
-document.querySelector('form').addEventListener('submit', function (e) {
-    e.preventDefault();
+function sendMail() {
 
     // Collect form data
     const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        message: document.getElementById('message').value
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
     };
 
     // Send email using EmailJS
@@ -32,7 +29,8 @@ document.querySelector('form').addEventListener('submit', function (e) {
         }, function (error) {
             alert('Oops! Something went wrong. Please try again later.');
         });
-});
+}
+
 
 // Smooth scroll for navigation links and specific buttons with adjusted offset
 document.querySelectorAll('nav a, .btn').forEach(anchor => {
