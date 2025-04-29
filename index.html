@@ -42,6 +42,29 @@
         }
     </script>
     <script src="script.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    // Calculate the offset position with an additional adjustment
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const additionalOffset = 30; // Adjust this value as needed
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition - headerOffset + additionalOffset;
+
+                    // Scroll to the calculated position
+                    window.scrollBy({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
