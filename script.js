@@ -1,7 +1,7 @@
 // Basic navigation toggle for mobile
-document.querySelector('.nav-toggle').addEventListener('click', function () {
-    document.querySelector('nav').classList.toggle('active');
-});
+// document.querySelector('.nav-toggle').addEventListener('click', function () {
+//     document.querySelector('nav').classList.toggle('active');
+// });
 
 // Close menu when clicking a link on mobile
 document.querySelectorAll('nav a').forEach(link => {
