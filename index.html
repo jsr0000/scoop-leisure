@@ -16,7 +16,7 @@
             });
         })();
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
@@ -40,11 +40,10 @@
                     });
             });
         }
-    </script>
-    <script src="script.js"></script>
+    </script> -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('nav a').forEach(anchor => {
+            document.querySelectorAll('nav a, .btn').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
@@ -163,13 +162,6 @@
             <h2>Contact Us</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <!-- <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>01234 567890</p>
-                        </div>
-                    </div> -->
                     <div class="contact-item">
                         <div class="contact-icon">✉️</div>
                         <div>
