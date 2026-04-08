@@ -45,9 +45,19 @@
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('nav a, .btn').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href');
+
+                    // Only handle in-page anchor links; allow external links as normal.
+                    if (!targetId || !targetId.startsWith('#')) {
+                        return;
+                    }
+
                     const targetElement = document.querySelector(targetId);
+                    if (!targetElement) {
+                        return;
+                    }
+
+                    e.preventDefault();
 
                     // Calculate the offset position with an additional adjustment
                     const headerOffset = document.querySelector('header').offsetHeight;
